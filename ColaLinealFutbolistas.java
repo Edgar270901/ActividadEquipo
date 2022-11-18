@@ -2,11 +2,11 @@ public class ColaLinealFutbolistas {
     private Futbolista c[]; // Vector para manejar la fila de ENTEROS
     private int frente, fin; // Apuntadores para el frente y final de la estructura
 
-    /*public ColaLinealFutbolistas() {
+    public ColaLinealFutbolistas() {
         c = new Futbolista[5];
         frente = 0;
         fin = -1;
-    }*/
+    }
 
     public ColaLinealFutbolistas(int n) {
         c = new Futbolista[n];
@@ -110,5 +110,11 @@ public class ColaLinealFutbolistas {
         this.frente = frente;
     }
 
-   
+    public int getFin() {
+        return fin;
+    }
+
+    public void setFin(int fin) {
+        this.fin = fin;
+    }
 }

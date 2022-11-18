@@ -39,7 +39,7 @@ public class Futbolista {
         
 	
 	public String toString() {
-		return"El nombre del jugador es:\n"+ nombre
+		return"\nEl nombre del jugador es:\n"+ nombre
 			+"\nEl equipo es:\n"+equipo
                         +"\nLos goles del jugador son:\n" + goles;
 		

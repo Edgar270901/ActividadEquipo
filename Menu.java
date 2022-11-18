@@ -40,7 +40,7 @@ public class Menu {
                         nombre = entrada.nextLine();
                         System.out.println("Ingrese el equipo:\n"
                                 + "Opciones\n"
-                                + "Barcelona\n"
+                                + "\nBarcelona\n"
                                 + "Valencia\n"
                                 + "Sevilla\n");
                         equipo = entrada.nextLine();

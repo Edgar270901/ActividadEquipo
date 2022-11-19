@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Edgar Robles
+ * @author Edgar Robles y JULian
  */
 public class Menu {
 
@@ -26,9 +26,7 @@ public class Menu {
             System.out.println("4)Eliminar un jugador profesional");
             System.out.println("5)Pasar jugadores de amateur a profesional ");
             System.out.println("6)Suma total de goles");
-            System.out.println("7)Jugador amateur con mas goles");
-            System.out.println("8)Jugadores de un equipo");
-            System.out.println("9)Salir\n");
+            System.out.println("7)Salir\n");
             System.out.println("\nIngrese la opcion :");
             opc = entrada.nextInt();
             switch (opc) {
@@ -129,20 +127,13 @@ public class Menu {
 
                     break;
 
+               
                 case 7:
-                    
-                    break;
-
-                case 8:
-                    
-                    break;
-
-                case 9:
                     System.out.println("Saliendo del programa...");
                     break;
             }
 
-        } while (opc != 9);
+        } while (opc != 7);
 
     }
 

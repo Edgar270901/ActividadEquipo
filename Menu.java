@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,16 +20,8 @@ public class Menu {
         int categoria;
 
         do {
-            System.out.println("\nMenu de opciones".toUpperCase() + "\n");
-            System.out.println("1)Insertar futbolista");
-            System.out.println("2)Mostrar jugadores profesionales");
-            System.out.println("3)Mostrar jugadores amateur");
-            System.out.println("4)Eliminar un jugador profesional");
-            System.out.println("5)Pasar jugadores de amateur a profesional ");
-            System.out.println("6)Suma total de goles");
-            System.out.println("7)Salir\n");
-            System.out.println("\nIngrese la opcion :");
-            opc = entrada.nextInt();
+            
+            opc = Integer.parseInt(JOptionPane.showInputDialog("\nMenu de opciones\n 1)Insertar futbolista\n2)Mostrar jugadores profesionales\n3)Mostrar jugadores amateur\n4)Eliminar un jugador profesional\n5)Pasar jugadores de amateur a profesional \n6)Suma total de goles7)Salir\n\nIngrese la opcion :"));
             switch (opc) {
 
                 case 1:

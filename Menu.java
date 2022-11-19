@@ -21,26 +21,34 @@ public class Menu {
 
         do {
             
-            opc = Integer.parseInt(JOptionPane.showInputDialog("\nMenu de opciones\n 1)Insertar futbolista\n2)Mostrar jugadores profesionales\n3)Mostrar jugadores amateur\n4)Eliminar un jugador profesional\n5)Pasar jugadores de amateur a profesional \n6)Suma total de goles7)Salir\n\nIngrese la opcion :"));
+            opc = Integer.parseInt(JOptionPane.showInputDialog("\nMenu de opciones\n "+
+            "1)Insertar futbolista\n"+
+            "2)Mostrar jugadores profesionales\n"+
+            "3)Mostrar jugadores amateur\n"+
+            "4)Eliminar un jugador profesional\n"+
+            "5)Pasar jugadores de amateur a profesional \n"+
+            "6)Suma total de goles"+
+            "\n7)Salir"+
+            "\nIngrese la opcion :"));
             switch (opc) {
 
                 case 1:
                     if (!amateur.estaLlena() || !profesional.estaLlena()) {
-                        System.out.println("Ingrese la nombre del jugador");
-                        entrada.nextLine();
-                        nombre = entrada.nextLine();
-                        System.out.println("Ingrese el equipo:\n"
+                        
+                        
+                        nombre = JOptionPane.showInputDialog("Ingrese la nombre del jugador");
+                       equipo = JOptionPane.showInputDialog("Ingrese el equipo:\n"
                                 + "Opciones\n"
-                                + "\nBarcelona\n"
+                                + "Barcelona\n"
                                 + "Valencia\n"
                                 + "Sevilla\n");
-                        equipo = entrada.nextLine();
-                        System.out.println("Cantidad de goles del jugador:");
-                        goles = entrada.nextInt();
-                        System.out.println("Que categoria es el futbolista?\n"
+                       
+                         goles =Integer.parseInt( JOptionPane.showInputDialog("Cantidad de goles del jugador:"));
+                      
+                       
+                        categoria =Integer.parseInt(JOptionPane.showInputDialog("Que categoria es el futbolista?\n"
                                 + "1)Profesional\n"
-                                + "2)Amateur");
-                        categoria = entrada.nextInt();
+                                + "2)Amateur"));
                         if (!amateur.estaLlena() || !profesional.estaLlena()) {
                             if (categoria > 0 && categoria <= 2) {
                                 if (categoria == 1) {
@@ -51,31 +59,31 @@ public class Menu {
                                 }
                             }
                         } else {
-                            System.out.println("favor de ingresar un dato valido\n".toUpperCase());
+                            JOptionPane.showMessageDialog(null,"favor de ingresar un dato valido\n".toUpperCase());
                         }
 
                     } else {
-                        System.out.println("las filas estan llenas\n".toUpperCase());
+                        JOptionPane.showMessageDialog(null,"las filas estan llenas\n".toUpperCase());
                     }
 
                     break;
 
                 case 2:
                     if (!profesional.estaVacia()) {
-                        System.out.println("Jugadores Profesionales:\n " + profesional.toString());
+                        JOptionPane.showMessageDialog(null,"Jugadores Profesionales:\n " + profesional.toString());
 
                     } else {
-                        System.out.println("No hay jugadores".toUpperCase());
+                        JOptionPane.showMessageDialog(null,"No hay jugadores".toUpperCase());
                     }
 
                     break;
 
                 case 3:
                     if (!amateur.estaVacia()) {
-                        System.out.println("Jugadores Amateurs:\n " + amateur.toString());
+                        JOptionPane.showMessageDialog(null,"Jugadores Amateurs:\n " + amateur.toString());
 
                     } else {
-                        System.out.println("No hay jugadores".toUpperCase());
+                        JOptionPane.showMessageDialog(null,"No hay jugadores".toUpperCase());
                     }
 
                     break;
@@ -83,10 +91,10 @@ public class Menu {
                 case 4:
 
                     if (!profesional.estaVacia()) {
-                        System.out.println(profesional.eliminar());
+                        JOptionPane.showMessageDialog(null,profesional.eliminar());
 
                     } else {
-                        System.out.println("no hay jugadores profesionales".toUpperCase());
+                        JOptionPane.showMessageDialog(null,"no hay jugadores profesionales".toUpperCase());
                     }
 
                     break;
@@ -102,7 +110,7 @@ public class Menu {
                         }
                         
                     }else {
-                        System.out.println("No hay jugadores registrados".toUpperCase());
+                        JOptionPane.showMessageDialog(null,"No hay jugadores registrados".toUpperCase());
                      }
                     
 
@@ -112,17 +120,17 @@ public class Menu {
 
                     if (!profesional.estaVacia() || !amateur.estaVacia()) {
                         int sumaTotal = profesional.totalGoles() + amateur.totalGoles();
-                        System.out.println("Suma total de goles\n"
+                        JOptionPane.showMessageDialog(null,"Suma total de goles\n"
                                 + sumaTotal);
                     } else {
-                        System.out.println("No hay jugadores registrados".toUpperCase());
+                        JOptionPane.showMessageDialog(null,"No hay jugadores registrados".toUpperCase());
                     }
 
                     break;
 
                
                 case 7:
-                    System.out.println("Saliendo del programa...");
+                JOptionPane.showMessageDialog(null,"Saliendo del programa...");
                     break;
             }
 

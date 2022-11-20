@@ -19,7 +19,7 @@ public class Menu {
         int categoria;
 
         do {
-            System.out.println("\nMenu de opciones".toUpperCase() + "\n");
+            System.out.println("\nMenú de opciones".toUpperCase() + "\n");
             System.out.println("1)Insertar futbolista");
             System.out.println("2)Mostrar jugadores profesionales");
             System.out.println("3)Mostrar jugadores amateur");
